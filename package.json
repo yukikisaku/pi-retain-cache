@@ -1,0 +1,58 @@
+{
+  "name": "@yukikisaku/pi-cache-retain",
+  "version": "0.1.0",
+  "description": "Keep supported Pi provider prompt caches warm while the TUI is idle",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "config.json",
+    "config.ts",
+    "index.ts",
+    "retain-controller.ts",
+    "retain-notice-logic.ts",
+    "retain-protocol.ts",
+    "retain-renderer-logic.ts",
+    "retain-renderer.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/config.test.mjs test/custom-entry-host.test.mjs test/retain-controller.test.mjs test/retain-notice.test.mjs test/retain-protocol.test.mjs test/retain-renderer.test.mjs",
+    "smoke:packed": "node scripts/smoke-packed.mjs",
+    "check": "npm test && npm run smoke:packed && npm pack --dry-run"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "prompt-cache",
+    "cache",
+    "tui"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    },
+    "@earendil-works/pi-tui": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukikisaku/pi-cache-retain.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

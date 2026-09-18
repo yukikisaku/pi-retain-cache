@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "intervalMinutes": 25,
+  "maxIdleMinutes": 120,
+  "requestTimeoutMinutes": 2,
+  "providers": [
+    "openai-codex",
+    "claude-bridge"
+  ],
+  "providerOverrides": {
+    "claude-bridge": {
+      "intervalMinutes": 50,
+      "maxIdleMinutes": 120
+    }
+  },
+  "showNotification": true
+}
