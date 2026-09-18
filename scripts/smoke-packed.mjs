@@ -7,7 +7,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const tempRoot = mkdtempSync(join(tmpdir(), "pi-cache-retain-pack-"));
+const tempRoot = mkdtempSync(join(tmpdir(), "pi-retain-cache-pack-"));
 
 try {
   const packOutput = execFileSync(
@@ -83,7 +83,7 @@ try {
   assert.deepEqual(loaded.errors, [], "Pi loader reported extension errors");
   assert.equal(loaded.extensions.length, 1, "Pi must load exactly one packed extension");
 
-  console.log("Packed pi-cache-retain loaded successfully through Pi.");
+  console.log("Packed pi-retain-cache loaded successfully through Pi.");
 } finally {
   rmSync(tempRoot, { recursive: true, force: true });
 }

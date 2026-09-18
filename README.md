@@ -1,4 +1,4 @@
-# pi-cache-retain
+# pi-retain-cache
 
 Keep supported Pi provider prompt caches warm during idle TUI sessions without showing the synthetic control exchange as normal conversation content.
 
@@ -13,7 +13,7 @@ The extension currently targets the `openai-codex` and `claude-bridge` providers
 ## Installation
 
 ```bash
-pi install npm:@yukikisaku/pi-cache-retain
+pi install npm:@yukikisaku/pi-retain-cache
 ```
 
 ## Usage
@@ -67,7 +67,7 @@ The initial configuration is:
 ## Uninstallation
 
 ```bash
-pi remove npm:@yukikisaku/pi-cache-retain
+pi remove npm:@yukikisaku/pi-retain-cache
 ```
 
 ## License

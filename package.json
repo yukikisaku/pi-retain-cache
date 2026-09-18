@@ -1,5 +1,5 @@
 {
-  "name": "@yukikisaku/pi-cache-retain",
+  "name": "@yukikisaku/pi-retain-cache",
   "version": "0.1.0",
   "description": "Keep supported Pi provider prompt caches warm while the TUI is idle",
   "type": "module",
@@ -50,7 +50,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yukikisaku/pi-cache-retain.git"
+    "url": "git+https://github.com/yukikisaku/pi-retain-cache.git"
   },
   "publishConfig": {
     "access": "public"

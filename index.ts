@@ -87,7 +87,7 @@ export default function piCacheRetain(pi: ExtensionAPI): void {
 			config = loadConfig();
 		} catch (error) {
 			ctx.ui.notify(
-				`pi-cache-retain: Failed to load config.json: ${error instanceof Error ? error.message : String(error)}`,
+				`pi-retain-cache: Failed to load config.json: ${error instanceof Error ? error.message : String(error)}`,
 				"error",
 			);
 			return undefined;
@@ -132,7 +132,7 @@ export default function piCacheRetain(pi: ExtensionAPI): void {
 				}
 			},
 			onFailure: (message) => {
-				latestContext?.ui.notify(`pi-cache-retain: ${message}`, "error");
+				latestContext?.ui.notify(`pi-retain-cache: ${message}`, "error");
 			},
 		});
 	}
@@ -166,7 +166,7 @@ export default function piCacheRetain(pi: ExtensionAPI): void {
 			saveConfig(next);
 		} catch (error) {
 			ctx.ui.notify(
-				`pi-cache-retain: Failed to save config.json: ${error instanceof Error ? error.message : String(error)}`,
+				`pi-retain-cache: Failed to save config.json: ${error instanceof Error ? error.message : String(error)}`,
 				"error",
 			);
 			return false;
@@ -184,7 +184,7 @@ export default function piCacheRetain(pi: ExtensionAPI): void {
 
 	async function openSettings(ctx: ExtensionContext): Promise<void> {
 		if (ctx.mode !== "tui" || !config || !controller) {
-			ctx.ui.notify("pi-cache-retain: Settings require TUI mode.", "error");
+			ctx.ui.notify("pi-retain-cache: Settings require TUI mode.", "error");
 			return;
 		}
 
