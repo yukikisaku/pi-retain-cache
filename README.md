@@ -70,6 +70,12 @@ The initial configuration is:
 pi remove npm:@yukikisaku/pi-retain-cache
 ```
 
+## Pull requests
+
+This repository includes a policy for automatic AI review and merge of incoming pull requests. It becomes active when the CI and merge workflows are on `main` and the maintainer's GitHub event automation is enabled; a draft setup PR does not activate it.
+
+Once active, AI reviews each non-draft PR and it is merged automatically only when the review has no findings, required CI succeeds, and there are no conflicts or unresolved review threads. New commits require a new review. Changes to the automation itself require manual merge. See [AI review and merge operations](docs/ai-review-operations.md).
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
